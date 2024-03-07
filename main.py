@@ -1,3 +1,7 @@
+import time
+
+import math_utilties
+
 def main():
     print("Wprowadź działanie w formacie <liczba_1> <działanie> <liczba_2>")
     print("Dostępne działania to: ")
@@ -16,19 +20,29 @@ def main():
         print("Nieprawidłowy format danych!")
         return
 
-    match operation:
-        case "+":
-            print("Dodawanie")
-        case "-":
-            print("Odejmowanie")
-        case "*":
-            print("Mnożenie")
-        case "/":
-            print("Dzielenie")
-
+    try:
+        match operation:
+            case "+":
+                result = math_utilties.sum(num_1, num_2)
+            case "-":
+                result = math_utilties.subtraction(num_1, num_2)
+            case "*":
+                result = math_utilties.multiplication(num_1, num_2)
+            case "/":
+                result = math_utilties.division(num_1, num_2)
+            case "^":
+                print("Potęgowanie")
+            case _:
+                print("Nie ma takiego działania!")
+                return
+        print()
+        print(f"Wynik działania {user_input} to: {result}")
+    except math_utilties.MathException as e:
+        print(f"Błąd - {e}")
 
 if __name__ == "__main__":
     while True:
         main()
+        time.sleep(1)
         print("-" * 5)
         print()
