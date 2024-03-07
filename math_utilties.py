@@ -28,8 +28,10 @@ def division(a: float, b: float) -> float:
 
 
 def power(a, b):
-    y = 1
-    for x in range(b):
-        y = y * a
-    return y
+    # Sorry, it doesn't work
+    # y = 1
+    # for x in range(b):
+    #     y = y * a
+    # return y
+    return math.pow(a, b)
 
