@@ -31,7 +31,7 @@ def main():
             case "/":
                 result = math_utilties.division(num_1, num_2)
             case "^":
-                print("Potęgowanie")
+                result = math_utilties.power(num_1, num_2)
             case _:
                 print("Nie ma takiego działania!")
                 return
