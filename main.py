@@ -9,6 +9,7 @@ def main():
     print("- = odejmowanie")
     print("* = mnożenie")
     print("/ = dzielenie")
+    print("^ = potęgowanie")
 
     user_input = input("Podaj działanie: ")
 
